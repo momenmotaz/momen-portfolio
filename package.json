@@ -8,14 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vinodjangid07/vinodjangid07.github.io.git"
+    "url": "git+https://github.com/momenmotaz/momen-portfolio.git"
   },
   "keywords": [],
+  "author": "Momen Motaz",
+  "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/vinodjangid07/vinodjangid07.github.io/issues"
+    "url": "https://github.com/momenmotaz/momen-portfolio/issues"
   },
-  "homepage": "https://github.com/vinodjangid07/vinodjangid07.github.io#readme",
+  "homepage": "https://github.com/momenmotaz/momen-portfolio#readme",
   "dependencies": {
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
