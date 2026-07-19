@@ -333,10 +333,9 @@ noscript {
     position: fixed
 }
 
-#name,
 .getintouch-heading article {
     background: -webkit-linear-gradient(135deg, var(--color-light-blue), var(--color-light-purple), var(--color-light-blue), var(--color-light-purple));
-    -webkit-text-fill-color: transparent
+    -webkit-text-fill-color: transparent;
 }
 
 noscript {
@@ -666,12 +665,21 @@ noscript {
 
 #name {
     align-items: flex-start;
+}
+
+#name .jello {
     background: linear-gradient(-45deg, var(--color-light-blue), var(--color-light-purple), var(--color-light-blue), var(--color-light-purple));
     background-clip: text;
     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     background-size: 400% 400%;
     -webkit-animation: 3s infinite gradient;
-    animation: 3s infinite gradient
+    animation: 3s infinite gradient;
+}
+
+#name .jello:hover {
+    -webkit-animation: .9s both jello-vertical, 3s infinite gradient;
+    animation: .9s both jello-vertical, 3s infinite gradient;
 }
 
 @keyframes gradient {
@@ -977,7 +985,11 @@ noscript {
 .dp img,
 .dp::after,
 .dp::before {
-    width: 300px
+    width: 300px;
+    height: 300px;
+}
+.dp img {
+    object-fit: cover;
 }
 
 .projects-heading-article,
@@ -2162,3 +2174,204 @@ body.has-announcement {
         line-height: 1.4;
     }
 }
+/* Chatbot Widget */
+.chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 350px;
+  background-color: var(--color-dark-mode);
+  border: 1px solid var(--tech-stack-box-border-color);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1000;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  height: 450px;
+  opacity: 1;
+  transform: scale(1);
+  transform-origin: bottom left;
+}
+.chatbot-container.closed {
+  opacity: 0;
+  transform: scale(0.5);
+  pointer-events: none;
+}
+.chatbot-fab {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(-45deg, var(--color-light-blue), var(--color-light-purple), var(--color-light-blue), var(--color-light-purple));
+  background-size: 400% 400%;
+  animation: 3s infinite gradient;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  z-index: 999;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.chatbot-fab:hover {
+  transform: scale(1.1);
+}
+.chatbot-container:not(.closed) + .chatbot-fab {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.5);
+}
+.chatbot-header {
+  background: linear-gradient(-45deg, var(--color-light-blue), var(--color-light-purple), var(--color-light-blue), var(--color-light-purple));
+  background-size: 400% 400%;
+  animation: 3s infinite gradient;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Orbitron', sans-serif;
+  border-bottom: 1px solid var(--tech-stack-box-border-color);
+  cursor: pointer;
+}
+.chatbot-title {
+  font-weight: bold;
+  font-size: 14px;
+}
+.chatbot-body {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--color-dark-mode);
+}
+.chatbot-container.closed .chatbot-body,
+.chatbot-container.closed .chatbot-footer {
+  display: none;
+}
+.chat-message {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-family: 'Fira Code', monospace;
+  font-size: 13px;
+  max-width: 80%;
+  line-height: 1.4;
+  word-break: break-word;
+}
+.chat-message.bot {
+  background-color: var(--tech-stack-box-first-color);
+  color: var(--color-light-mode);
+  align-self: flex-start;
+  border-bottom-left-radius: 2px;
+  border: 1px solid var(--tech-stack-box-border-color);
+}
+.chat-message.user {
+  background: linear-gradient(135deg, var(--color-light-blue), var(--color-purple));
+  color: #ffffff;
+  align-self: flex-end;
+  border-bottom-right-radius: 2px;
+}
+.chatbot-footer {
+  display: flex;
+  padding: 10px;
+  background-color: var(--tech-stack-box-first-color);
+  border-top: 1px solid var(--tech-stack-box-border-color);
+}
+#chat-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--tech-stack-box-border-color);
+  border-radius: 6px;
+  background-color: var(--color-dark-mode);
+  color: var(--color-light-mode);
+  font-family: 'Fira Code', monospace;
+  outline: none;
+}
+#chat-input:focus {
+  border-color: var(--color-light-purple);
+}
+.chatbot-footer button {
+  background: linear-gradient(135deg, var(--color-light-blue), var(--color-purple));
+  background-size: 200% 200%;
+  color: #ffffff;
+  border: none;
+  padding: 0 15px;
+  margin-left: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 12px;
+  transition: background-position 0.3s;
+}
+.chatbot-footer button:hover {
+  background-position: right center;
+}
+
+/* Markdown Styles */
+.chat-message p {
+  margin: 0 0 8px 0;
+}
+.chat-message p:last-child {
+  margin-bottom: 0;
+}
+.chat-message ul, .chat-message ol {
+  margin: 0 0 8px 0;
+  padding-inline-start: 24px;
+}
+.chat-message li {
+  margin-bottom: 4px;
+}
+.chat-message code {
+  background: rgba(128, 128, 128, 0.2);
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: 'Fira Code', monospace;
+}
+.chat-message pre {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 8px 0;
+}
+.chat-message pre code {
+  background: transparent;
+  padding: 0;
+}
+.chat-message h1, .chat-message h2, .chat-message h3, .chat-message h4 {
+  margin: 12px 0 8px 0;
+  font-size: 1.1em;
+}
+
+/* Glassmorphism Classes */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 25px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.glass-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-light-purple);
+}
+.section-heading-article {
+  font-family: 'Fira Code', monospace;
+  font-size: 2rem;
+  color: var(--color-light-blue);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.info-div-centered { width: 100% !important; align-items: center !important; text-align: center !important; }

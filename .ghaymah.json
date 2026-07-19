@@ -1,0 +1,20 @@
+{
+  "id": "1607b984-68a8-4f02-93d7-cd30b7eb77e2",
+  "name": "momen-portfolio",
+  "projectId": "72510e63-b2ca-40dd-8531-ad8329cd97d8",
+  "ports": [
+    {
+      "expose": true,
+      "number": 3000
+    }
+  ],
+  "publicAccess": {
+    "enabled": true,
+    "domain": "momenmotaz.me"
+  },
+  "resourceTier": "t7",
+  "dockerFileName": "Dockerfile",
+  "env": {
+    "DRAGON_API_KEY": "drg_c706b0fa3e11358e0488a950a1a3806517812922d77ecfa8579fb7458543a4dd"
+  }
+}

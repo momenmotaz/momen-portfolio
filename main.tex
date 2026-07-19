@@ -1,0 +1,153 @@
+%==================================================================
+% Momen Motaz - Cloud Engineer / SRE Resume
+% ATS-optimized, FAANG-level, 2-page, Overleaf-compatible
+%
+% Compile with: pdfLaTeX (Overleaf default), XeLaTeX, or Tectonic
+%==================================================================
+\documentclass{resume}
+
+\begin{document}
+
+%------------------------------------------------------------------
+% 1. HEADER
+%------------------------------------------------------------------
+\resumeheader{Momen Motaz}%
+  {Cloud Engineer \textbar\ DevOps Engineer \textbar\ Site Reliability Engineer}%
+  {Arish, Egypt \textbar\ \href{mailto:momenmotaz88@gmail.com}{momenmotaz88@gmail.com} \textbar\ +20 106 023 2086 \textbar\ \href{https://www.linkedin.com/in/momenmotaz/}{linkedin.com/in/momenmotaz} \textbar\ \href{https://github.com/momenmotaz}{github.com/momenmotaz}}%
+  {qr-github.png}
+
+%------------------------------------------------------------------
+% 2. PROFESSIONAL SUMMARY
+%------------------------------------------------------------------
+\section{Professional Summary}
+Cloud Engineer with hands-on experience designing, deploying, and operating AWS cloud infrastructure, Kubernetes workloads, and production-grade backend systems. Skilled in Infrastructure as Code, CI/CD, observability, and cloud automation with a strong focus on scalability, reliability, and performance optimization. Experienced building cloud-native platforms supporting AI applications and high-availability services.
+
+%------------------------------------------------------------------
+% 3. CORE SKILLS
+%------------------------------------------------------------------
+\section{Core Skills}
+\skillline{Cloud}{AWS (EC2, S3, VPC, IAM, RDS, EKS, ECR, ALB, Auto Scaling, Route 53, WAF)}
+\skillline{Containers}{Docker, Kubernetes (Deployments, Services, Ingress, HPA, RBAC), Amazon EKS}
+\skillline{Infrastructure as Code}{Terraform (modules, workspaces, remote state), Helm, Ansible}
+\skillline{CI/CD}{GitHub Actions, Jenkins, build-test-deploy pipelines, zero-downtime rolling updates}
+\skillline{Monitoring}{Prometheus, Grafana, InfluxDB, Uptime Kuma, structured logging, alerting}
+\skillline{Programming \& Automation}{Go, Python, Bash, YAML, JSON}
+\skillline{Networking}{VPC design, Security Groups, IAM policies, TLS, WAF, DDoS protection}
+\skillline{Databases}{PostgreSQL, Redis, ClickHouse, SQLite}
+\skillline{Operating Systems}{Linux administration, process management, SSH, shell scripting}
+
+%------------------------------------------------------------------
+% 4. PROFESSIONAL EXPERIENCE
+%------------------------------------------------------------------
+\section{Professional Experience}
+
+\expentry{Co-Founder \textbar\ Cloud \& DevOps Engineer}{SolidPoint.ai \textbar\ Remote}{Nov 2024 -- Jun 2025}
+\begin{itemize}
+  \item Spearheaded the cloud infrastructure strategy for a production AI SaaS platform serving 500+ monthly active users with YouTube, Reddit, and web article summarization.
+  \item Owned cloud infrastructure architecture, deployment automation, monitoring, and production reliability across 4 production services supporting 500+ monthly active users.
+  \item Directed backend workflow automation using n8n integrating YouTube and Reddit APIs for summarization pipelines, lifting on-site engagement by more than 23\%.
+  \item Reduced Docker image size from 200 MB to 60 MB (70\% reduction) using multi-stage builds and layer caching, accelerating deployments and cutting infrastructure cost.
+  \item Drove production monitoring strategy with Uptime Kuma and an n8n and Telegram bot that scrapes logs and pages an AI agent on incidents, raising operational efficiency from 30\% to 70\%.
+\end{itemize}
+
+\expentry{Cloud Engineer Intern}{Ghaymah Systems \textbar\ Remote}{Nov 2024 -- Feb 2025}
+\begin{itemize}
+  \item Owned the development of the core Ghaymah CLI supporting 3 production services with Docker deployment, secure authentication, and real-time resource monitoring, reducing manual deployment effort by 40\%.
+  \item Enhanced the MAMR secure tunneling service with TLS, DNS, and multiprotocol forwarding, improving tunneling efficiency by 89\%.
+  \item Engineered a monitoring API processing over 10,000 telemetry records daily with InfluxDB storage and proactive alerts, reducing manual monitoring by 60\% and downtime by 25\%.
+  \item Architected self-healing infrastructure and custom observability dashboards tracking 15+ service metrics, cutting mean time to recovery (MTTR) by 45\% across 3 production services.
+\end{itemize}
+
+\expentry{Cloud Infrastructure Engineer (Training Program)}{DEPI Initiative (Digital Egypt Pioneers) \textbar\ Remote}{Jun 2024 -- Nov 2024}
+\begin{itemize}
+  \item Designed and deployed scalable AWS architectures using EC2, VPC, RDS, Auto Scaling, and ALB for a production web application, targeting 99.99\% uptime.
+  \item Coordinated deployment of a high-availability web application, improving page load times by 50\% through ALB traffic distribution and Auto Scaling.
+  \item Configured IAM roles, policies, and Security Groups with least-privilege principles, reducing unauthorized access risk by 40\%.
+  \item Collaborated on technical documentation, cost estimation, capacity planning, and disaster recovery procedures across 3 AWS environments.
+\end{itemize}
+
+\expentry{Systems Administrator}{Arish University \textbar\ Faculty of Computers and Information}{Jan 2023 -- Mar 2023}
+\begin{itemize}
+  \item Deployed and configured a Windows Server-based Active Directory environment managing 5+ university computer labs with centralized authentication and policy enforcement.
+  \item Created Organizational Units (OU) and Group Policy Objects (GPO) to enforce auto-login, website restrictions, desktop wallpaper standardization, and disabled CMD and Control Panel across all lab workstations.
+  \item Administered server-side controls for remote management of lab machines, improving lab security compliance and reducing unauthorized system access.
+\end{itemize}
+
+\newpage
+%------------------------------------------------------------------
+% 5. PROJECTS
+%------------------------------------------------------------------
+\section{Projects}
+
+\projectentry{Sopo API Gateway --- Graduation Capstone}{Go, Terraform, Amazon EKS, GitHub Actions, Helm, Prometheus}{Jan 2026 -- May 2026}
+\begin{itemize}
+  \item Architected the Go API Gateway runtime powering a plugin-based API lifecycle platform, achieving 48,200 requests per second and 1.2 ms p99 latency in formal benchmarks.
+  \item Implemented sub-50 ms hot-reload using Hasura, Redis Pub Sub, and atomic router swap with zero dropped connections at 10,000 requests per second; built a Radix Tree router with O(k) lookup and zero-allocation plugin pipeline.
+  \item Deployed a 5-strategy load balancer, Scatter-Gather aggregation engine (12,400 requests per second with 3 upstreams), and a ClickHouse analytics pipeline sustaining 50,000 events per second with no data loss.
+  \item Authored Terraform IaC provisioning a multi-AZ VPC, Amazon EKS, ECR, IAM, ALB, and Multi-AZ RDS PostgreSQL with GitHub Actions CI/CD, Helm-based HPA deployments, and a Prometheus observability stack.
+\end{itemize}
+
+\projectentry{RAG Platform --- Retrieval Augmented Generation \href{https://github.com/momenmotaz/dragon-ai}{[GitHub]}}{Next.js, TypeScript, Prisma, Qdrant}{Mar 2026 -- May 2026}
+\begin{itemize}
+  \item Deployed a RAG platform with multi-format ingestion (PDF, text, JSON, URL, GitHub repos) and project-isolated vector database collections.
+  \item Constructed two-stage semantic search with Bi-Encoder and Cross-Encoder reranking and intelligent fallback for 100\% uptime.
+  \item Formulated a multi-tier API key system with DDoS protection (100 requests per second per IP), global rate limiting, and AES-256-GCM encryption at rest.
+  \item Delivered streaming AI chat supporting 3 LLM providers with source citations and persistent history across 100\% of chat sessions.
+\end{itemize}
+
+\projectentry{DEPI DevOps Graduation Project --- Canary}{Terraform, Amazon EKS, ECR, GitHub Actions, Jenkins}{Oct 2025 -- Dec 2025}
+\begin{itemize}
+  \item Spearheaded a full DevOps architecture: Terraform IaC provisioning VPC, EKS, ECR, IAM, ALB, Security Groups, and public and private subnets.
+  \item Automated CI/CD using GitHub Actions workflows triggered by Terraform apply, deploying container images to ECR and an EKS cluster with EC2 worker node groups.
+  \item Established Jenkins CI/CD pipelines defining build, test, and production deployment stages across 5 microservices with Ansible configuration management.
+\end{itemize}
+
+%------------------------------------------------------------------
+% 6. EDUCATION
+%------------------------------------------------------------------
+\section{Education}
+\expentry{Bachelor of Computer Science --- Grade: Very Good}{Faculty of Computers and Information, Arish University}{Sep 2022 -- Jun 2026}
+
+%------------------------------------------------------------------
+% 7. CERTIFICATIONS & TRAINING
+%------------------------------------------------------------------
+\section{Certifications \& Training}
+\begin{itemize}
+  \item \textbf{DEPI Round 3 DevOps Track} --- Linux Admin, Ansible, Docker, Kubernetes, Jenkins, Terraform (Jun 2025 -- Dec 2025).
+  \item \textbf{NTI Cloud Architecture Internship (120 hours)} --- AWS Cloud Practitioner and Solutions Architect Labs (Jul 2025 -- Aug 2025).
+  \item \textbf{AWS Academy Cloud Architecting} --- Amazon Web Services (Oct 2024).
+  \item \textbf{AWS Academy Cloud Security Foundations} --- Amazon Web Services (Sep 2024).
+  \item \textbf{AWS Knowledge: Architecting} --- Amazon Web Services (Sep 2024).
+  \item \textbf{AWS Cloud Quest: Cloud Practitioner} --- Amazon Web Services (Aug 2024).
+  \item \textbf{Cisco CyberOps Associate} --- Cisco (Aug 2023).
+\end{itemize}
+
+%------------------------------------------------------------------
+% 8. LEADERSHIP EXPERIENCE
+%------------------------------------------------------------------
+\section{Leadership Experience}
+\begin{itemize}
+  \item \textbf{Co-Founder}, SolidPoint.ai: Directed cloud infrastructure, DevOps practices, and production operations for an AI SaaS platform serving 500+ monthly active users.
+  \item \textbf{Core Contributor}, Sopo API Gateway (Graduation Capstone): Drove system architecture, API gateway design, and cloud deployment strategy for a team-based capstone project.
+  \item \textbf{Online Instructor}, PNA Academy (Jan 2023 -- Dec 2024): Mentored undergraduate students through online OOP in C++ sessions reaching learners across social media platforms.
+\end{itemize}
+
+%------------------------------------------------------------------
+% 9. AWARDS
+%------------------------------------------------------------------
+\section{Awards}
+\begin{itemize}
+  \item \textbf{7th Place --- AI Week Hackathon}, Mansoura University (Jan 2026): selected to represent Arish University at the First Summit Week for Artificial Intelligence.
+  \item \textbf{2nd Place --- University Cultural Competition}, Arish University (Mar 2024).
+  \item \textbf{Hackathon Youth Recognition Award} (Mar 2024) for an accepted innovative hackathon proposal.
+\end{itemize}
+
+%------------------------------------------------------------------
+% 10. LANGUAGES
+%------------------------------------------------------------------
+\section{Languages}
+\begin{itemize}
+  \item Arabic (Native), English (Professional Working Proficiency).
+\end{itemize}
+
+\end{document}

@@ -23,10 +23,10 @@ What are you doing here?! you sneaky developer...
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#000" />
   <meta property="og:image" content="https://v1.vinodjangid.site/src/png/Preview-card-min.png" />
-  <meta property="og:title" content="Vinod Jangid | Portfolio" />
-  <meta property="og:url" content="https://v1.vinodjangid.site" />
-  <meta property="og:site_name" content="Vinod Jangid Portfolio" />
-  <title>Vinod Jangid | Portfolio</title>
+  <meta property="og:title" content="Momen Motaz | Portfolio" />
+  <meta property="og:url" content="https://momenmotaz.site" />
+  <meta property="og:site_name" content="Momen Motaz Portfolio" />
+  <title>Momen Motaz | Portfolio</title>
   <link rel="icon" type="image/x-icon" href="src/png/main-favicon.png" />
   <!-- aos cdn -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -36,26 +36,14 @@ What are you doing here?! you sneaky developer...
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps" />
 
-<body class="body has-announcement">
+<body class="body">
   <audio loop="" id="audioPlayer" style="display: none">
     <source src="src/mp3/preloader.mp3" type="audio/mp3" />
   </audio>
   <div id="preloader"></div>
   <noscript>Allow Javascript</noscript>
 
-  <!-- announcement Bar -->
-  <div class="announcement-bar" id="announcement-bar">
-    <div class="announcement-content">
-      <span class="announcement-emoji">🚀</span>
-      <span class="announcement-text">
-        You're viewing the V1 portfolio. The redesigned V2 is now live at 
-        <a href="https://vinodjangid.site" target="_blank" rel="noopener noreferrer" class="announcement-link">
-          vinodjangid.site<svg class="external-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-        </a>!
-      </span>
-    </div>
-  </div>
-
+  <!-- announcement Bar Removed -->
   <header>
     <div class="cursor-inner" id="cursor-inner"></div>
     <div class="cursor-outer" id="cursor-outer"></div>
@@ -69,27 +57,45 @@ What are you doing here?! you sneaky developer...
       </div>
       <div class="navbar-tabs" id="navbar-tabs">
         <ul class="navbar-tabs-ul">
-          <li class="home activeThistab" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="100">
+          <li class="home activeThistab navbar-tabs-li" data-aos="fade-down" data-aos-delay="100">
             <a href="#home" tabindex="0" aria-label="Home menu button">
-              &#60;/Home&#62;
+              Home
             </a>
           </li>
 
-          <li class="about" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="300">
+          <li class="about navbar-tabs-li" data-aos="fade-down" data-aos-delay="300">
             <a href="#about" aria-label="about menu button">
-              &#60;/AboutMe&#62;
+              About Me
             </a>
           </li>
 
-          <li class="skills" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="500">
+          <li class="skills navbar-tabs-li" data-aos="fade-down" data-aos-delay="500">
             <a href="#skills" aria-label="skills menu button">
-              &#60;/Skills&#62;
+              Skills
             </a>
           </li>
 
-          <li class="projects" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="700">
+          <li class="certifications navbar-tabs-li" data-aos="fade-down" data-aos-delay="600">
+            <a href="#certifications" aria-label="certifications menu button">
+              Certs
+            </a>
+          </li>
+
+          <li class="projects navbar-tabs-li" data-aos="fade-down" data-aos-delay="700">
             <a href="#projects" aria-label="projects menu button">
-              &#60;/Projects&#62;
+              Projects
+            </a>
+          </li>
+
+          <li class="freelance navbar-tabs-li" data-aos="fade-down" data-aos-delay="800">
+            <a href="#freelance" aria-label="freelance menu button">
+              Freelance
+            </a>
+          </li>
+
+          <li class="blog navbar-tabs-li" data-aos="fade-down" data-aos-delay="900">
+            <a href="#blog" aria-label="blog menu button">
+              Blog
             </a>
           </li>
         </ul>
@@ -115,23 +121,38 @@ What are you doing here?! you sneaky developer...
       <ul class="mobile-navbar-tabs-ul" id="mobile-ul">
         <li id="home-mobile-tab" class="mobile-navbar-tabs-li home activeThismobiletab" onclick="hidemenubyli()">
           <a href="#home" tabindex="0" aria-label="Home menu button">
-            &#60;/Home&#62;
+            Home
           </a>
         </li>
 
         <li id="aboutme-mobile-tab" class="mobile-navbar-tabs-li about" onclick="hidemenubyli()">
           <a href="#about" tabindex="0" aria-label="about menu button">
-            &#60;/AboutMe&#62;
+            About Me
           </a>
         </li>
         <li id="skills-mobile-tab" class="mobile-navbar-tabs-li skills" onclick="hidemenubyli()">
           <a href="#skills" tabindex="0" aria-label="skills menu button">
-            &#60;/Skills&#62;
+            Skills
+          </a>
+        </li>
+        <li id="certifications-mobile-tab" class="mobile-navbar-tabs-li certifications" onclick="hidemenubyli()">
+          <a href="#certifications" tabindex="0" aria-label="certifications menu button">
+            Certs
           </a>
         </li>
         <li id="projects-mobile-tab" class="mobile-navbar-tabs-li projects" onclick="hidemenubyli()">
           <a href="#projects" tabindex="0" aria-label="projects menu button">
-            &#60;/Projects&#62;
+            Projects
+          </a>
+        </li>
+        <li id="freelance-mobile-tab" class="mobile-navbar-tabs-li freelance" onclick="hidemenubyli()">
+          <a href="#freelance" tabindex="0" aria-label="freelance menu button">
+            Freelance
+          </a>
+        </li>
+        <li id="blog-mobile-tab" class="mobile-navbar-tabs-li blog" onclick="hidemenubyli()">
+          <a href="#blog" tabindex="0" aria-label="blog menu button">
+            Blog
           </a>
         </li>
       </ul>
@@ -159,18 +180,17 @@ What are you doing here?! you sneaky developer...
           <p class="jello">m</p>
         </article>
         <article id="name" data-aos="fade-up" data-aos-delay="200">
-          <p class="jello">V</p>
-          <p class="jello">i</p>
-          <p class="jello">n</p>
+          <p class="jello">M</p>
           <p class="jello">o</p>
-          <p class="jello">d</p>
-          &nbsp;
-          <p class="jello">J</p>
-          <p class="jello">a</p>
+          <p class="jello">m</p>
+          <p class="jello">e</p>
           <p class="jello">n</p>
-          <p class="jello">g</p>
-          <p class="jello">i</p>
-          <p class="jello">d</p>
+          &nbsp;
+          <p class="jello">M</p>
+          <p class="jello">o</p>
+          <p class="jello">t</p>
+          <p class="jello">a</p>
+          <p class="jello">z</p>
           <p class="jello">.</p>
         </article>
 
@@ -179,43 +199,35 @@ What are you doing here?! you sneaky developer...
             <p class="jello">I</p>
           </div>
           <div>
-            <p class="jello">d</p>
-            <p class="jello">e</p>
-            <p class="jello">s</p>
+            <p class="jello">b</p>
+            <p class="jello">u</p>
             <p class="jello">i</p>
-            <p class="jello">g</p>
-            <p class="jello">n</p>
-          </div>
-          <div>
-            <p class="jello">&</p>
+            <p class="jello">l</p>
+            <p class="jello">d</p>
           </div>
           <div>
             <p class="jello">c</p>
+            <p class="jello">l</p>
             <p class="jello">o</p>
+            <p class="jello">u</p>
             <p class="jello">d</p>
-            <p class="jello">e</p>
           </div>
           <div>
+            <p class="jello">i</p>
+            <p class="jello">n</p>
             <p class="jello">f</p>
-            <p class="jello">o</p>
             <p class="jello">r</p>
-          </div>
-          <div>
-            <p class="jello">w</p>
-            <p class="jello">e</p>
-            <p class="jello">b</p>
+            <p class="jello">a</p>
             <p class="jello">.</p>
           </div>
         </article>
         <p id="info-para" data-aos="fade-up" data-aos-delay="600">
-          Web Developer with experience of Digital Concept Arts, Frontend Web
-          Designs. I Love fun Web UI, collaboration and making products.<br />
+          Cloud Engineer & DevOps Engineer focused on building reliable, scalable, and secure cloud-native infrastructure.<br />
           <br />
-          I value simple content structure, clean design patterns, and
-          thoughtful interactions.
+          Co-Founder at SolidPoint.ai, automating everything that moves with Terraform & CI/CD.
         </p>
         <div class="contact-btn-div" data-aos="fade-up" data-aos-delay="800">
-          <a href="mailto:infovinodjangid@gmail.com" tabindex="-1">
+          <a href="mailto:momenmotaz88@gmail.com" tabindex="-1">
             <button class="letsTalkBtn">
               <p class="letsTalkBtn-text">Let's Talk!</p>
               <span class="letsTalkBtn-BG"></span>
@@ -249,7 +261,7 @@ What are you doing here?! you sneaky developer...
       <div class="about-section">
         <div class="section-heading">
           <h2 class="section-heading-article" tabindex="0" aria-label="About me heading">
-            &#60;/AboutMe&#62;
+            About Me
           </h2>
           <p class="sectionHeadingP"></p>
         </div>
@@ -257,19 +269,15 @@ What are you doing here?! you sneaky developer...
         <div class="info-dp-section">
           <div class="about-info">
             <p tabindex="0">
-              Hi! My name is Vinod. I'm a web developer and digital visual artist. I love creating things that exist on the internet. My interest in web development started in 2021 when I decided to upload my digital concept arts online.
+              Hi! I'm a Cloud Engineer & DevOps Engineer focused on building reliable, scalable, and secure cloud-native infrastructure. I design production AWS environments, automate everything that moves with Terraform & CI/CD.
             </p>
             <br />
             <p tabindex="0">
-              Instead of creating an online Concepts Art website, i started
-              enjoying web development. Creating custom things for web taught
-              me a lot about design & development!
+              I'm also a Co-Founder at SolidPoint.ai — an AI-powered content summarization platform for YouTube, Reddit, and web articles — where I own cloud operations, containerized deployments, and CI/CD.
             </p>
             <br />
             <p tabindex="0">
-              My main focus these days is building interesting & creative web
-              designs, I like to code things from scratch, and enjoy bringing
-              ideas to life in the browser.
+              I'm a self-driven learner who reads docs instead of tutorials, prefers open-source tools, and documents every system I touch. Currently finishing my BSc in Computer Science at Arish University.
             </p>
              <!-- Resume button -->
       <button class="resume-btn" id="resume-btn" onclick="openURL()">
@@ -285,7 +293,7 @@ What are you doing here?! you sneaky developer...
           </div>
 
           <div class="dp" data-aos="fade-up">
-            <img src="src/webp/vinod (2).webp" alt="Vinod Jangid" tabindex="0" aria-label="image of vinod" />
+            <img src="graduated.jpg" alt="Momen Motaz" tabindex="0" aria-label="image of Momen" />
           </div>
         </div>
       </div>
@@ -296,7 +304,7 @@ What are you doing here?! you sneaky developer...
       <div class="skills-section">
         <div class="section-heading" data-aos="fade-up">
           <h2 class="section-heading-article" tabindex="0" aria-label="skills heading">
-            &#60;/Skills&#62;
+            Skills
           </h2>
           <p class="sectionHeadingP"></p>
         </div>
@@ -306,244 +314,210 @@ What are you doing here?! you sneaky developer...
             aria-label="As a frontend a developer these are the skills i have">
             Tech Stack
           </h3>
-          <ul class="tech-stack-wrapper">
+                    <ul class="tech-stack-wrapper">
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/htmllogo.png" alt="Html skill" class="tech-stack-logo" />
-              <span class="tooltip">HTML</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/csslogo.png" alt="css skill" class="tech-stack-logo" />
-              <span class="tooltip">CSS</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/jslogo.png" alt="js skill" class="tech-stack-logo" />
-              <span class="tooltip">JS</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/tailwind.png" alt="tailwind skill" class="tech-stack-logo" />
-              <span class="tooltip">TAILWIND</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/reactlogo.png" alt="react skill" class="tech-stack-logo" />
-              <span class="tooltip">REACTJS</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/nextlogo.png" alt="nextjs skill" class="tech-stack-logo" />
-              <span class="tooltip">NEXTJS</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/node.png" alt="nodejs skill" class="tech-stack-logo" />
-              <span class="tooltip">NODEJS</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/astro.png" alt="astro skill" class="tech-stack-logo" />
-              <span class="tooltip">ASTRO</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/githublogo.png" alt="github skill" class="tech-stack-logo needtobeinvert" />
-              <span class="tooltip">GITHUB</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/gitlogo.png" alt="git skill" class="tech-stack-logo" />
-              <span class="tooltip">GIT</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/tinacms.png" alt="tinacms skill" class="tech-stack-logo" />
-              <span class="tooltip">TINACMS</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/contentfulcms.png" alt="contentful skill" class="tech-stack-logo" />
-              <span class="tooltip">CONTENTFUL</span>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS skill" class="tech-stack-logo needtobeinvert" />
+              <span class="tooltip">AWS</span>
             </li>
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/figmalogo.png" alt="figma skill" class="tech-stack-logo" />
-              <span class="tooltip">FIGMA</span>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker skill" class="tech-stack-logo" />
+              <span class="tooltip">DOCKER</span>
+            </li>
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg" alt="K8s skill" class="tech-stack-logo" />
+              <span class="tooltip">KUBERNETES</span>
+            </li>
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg" alt="Terraform skill" class="tech-stack-logo" />
+              <span class="tooltip">TERRAFORM</span>
+            </li>
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg" alt="Go skill" class="tech-stack-logo" />
+              <span class="tooltip">GO</span>
+            </li>
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="Next.js skill" class="tech-stack-logo needtobeinvert" />
+              <span class="tooltip">NEXT.JS</span>
+            </li>
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python skill" class="tech-stack-logo" />
+              <span class="tooltip">PYTHON</span>
+            </li>
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL skill" class="tech-stack-logo" />
+              <span class="tooltip">POSTGRESQL</span>
             </li>
           </ul>
         </div>
       </div>
     </section>
     <!-- skills section ends -->
+    <section class="projects-section-container" id="certifications">
+      <div class="projects-section-div">
+        <div class="section-heading" data-aos="fade-up">
+          <h2 class="section-heading-article" tabindex="0">
+            Certifications
+          </h2>
+          <p class="sectionHeadingP"></p>
+        </div>
+        <div class="project-boxes-div" style="flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 30px;">
+          <div data-aos="fade-up" class="project-box-wrapper" style="width: 45%; min-width: 300px;">
+            <div class="project-box project-box2" id="project-box2" style="height: auto; min-height: 200px; padding: 30px 0;">
+              <div class="info-div info-div-centered">
+                <article class="ProjectHeading" style="font-size: 2.2rem;">AWS Academy Cloud Architecting</article>
+                <p class="ProjectDescription">Amazon Web Services - Oct 2024</p>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-up" class="project-box-wrapper" style="width: 45%; min-width: 300px;">
+            <div class="project-box project-box2" id="project-box2" style="height: auto; min-height: 200px; padding: 30px 0;">
+              <div class="info-div info-div-centered">
+                <article class="ProjectHeading" style="font-size: 2.2rem;">DEPI Round 3 DevOps Track</article>
+                <p class="ProjectDescription">Jun 2025 - Dec 2025 (Linux, Ansible, Docker, K8s, Jenkins, Terraform)</p>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-up" class="project-box-wrapper" style="width: 45%; min-width: 300px;">
+            <div class="project-box project-box2" id="project-box2" style="height: auto; min-height: 200px; padding: 30px 0;">
+              <div class="info-div info-div-centered">
+                <article class="ProjectHeading" style="font-size: 2.2rem;">NTI Cloud Architecture Internship</article>
+                <p class="ProjectDescription">Jul 2025 - Aug 2025 (120 hours AWS Labs)</p>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-up" class="project-box-wrapper" style="width: 45%; min-width: 300px;">
+            <div class="project-box project-box2" id="project-box2" style="height: auto; min-height: 200px; padding: 30px 0;">
+              <div class="info-div info-div-centered">
+                <article class="ProjectHeading" style="font-size: 2.2rem;">Cisco CyberOps Associate</article>
+                <p class="ProjectDescription">Cisco - Aug 2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: center; margin-top: 30px;" data-aos="fade-up">
+          <a href="https://www.credly.com/users/momen-motaz/badges/credly" target="_blank" class="cta" aria-label="View Credly Badges">
+            <span>View All Badges on Credly</span>
+            <svg viewBox="0 0 13 10" height="10px" width="15px"><path d="M1,5 L11,5"></path><polyline points="8 1 12 5 8 9"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section class="projects-section-container" id="projects">
       <div class="projects-section-div">
         <div class="section-heading" data-aos="fade-up">
           <h2 class="section-heading-article" tabindex="0" aria-label="My projects starts from here">
-            &#60;/Projects&#62;
+            Experience & Projects
           </h2>
           <p class="sectionHeadingP"></p>
         </div>
         <div class="project-boxes-div">
+          <!-- SolidPoint -->
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box2" id="project-box2">
-              <div class="info-div">
-                <img src="src/webp/asher-favicon.webp" alt="atomic asher website favicon" class="faviconforProject" />
-                <article class="ProjectHeading">Atomic Asher Official Website</article>
+              <div class="info-div info-div-centered">
+                <article class="ProjectHeading">SolidPoint.ai - Frontend & Backend</article>
                 <p class="ProjectDescription">
-                  Atomic Asher: A sleek and modern company website built to reflect their mission, team, and work through a clean and professional digital presence.
+                  <strong>Role:</strong> Full-Stack / Cloud Ops<br><br>
+                  Built Next.js frontend & Auth. Designed backend fetching any YouTube link, extracting transcripts globally, and running an automation flow to output structured English. Handled missing transcripts, 12+ hr videos, and Shorts. Cut costs by limiting free tiers. Deployed API to Cloud.
                 </p>
-                <div class="project-buttons">
-                  <a href="https://atomicasher.com" target="_blank" class="cta"
-                    aria-label="Visit atomicasher Live">
-                    <span>Live view</span>
-                    <svg viewBox="0 0 13 10" height="10px" width="15px">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="image-div">
-                <img src="src/webp/asher-preview.webp" alt="atomicasher website preview image" />
               </div>
             </div>
           </div>
-          <!-- ---------------------- -->
+          
+          <!-- Sopo Gateway -->
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box2" id="project-box2">
-              <div class="info-div">
-                <img src="src/ico/stopscams-favicon.ico" alt="stopscams website favicon" class="faviconforProject" />
-                <article class="ProjectHeading">StopScams.in</article>
+              <div class="info-div info-div-centered">
+                <article class="ProjectHeading">Sopo API Gateway - Capstone</article>
                 <p class="ProjectDescription">
-                  StopScams: An AI-powered platform that detects scam messages and supports users through digital fraud with smart tools and real-time help.
+                  <strong>Role:</strong> API Gateway Architect<br><br>
+                  Architected the Go API Gateway server. Authored the routing algorithm that massively boosted server speed. Integrated Dragon RAG as an internal assistant directly into the gateway, reducing customer service costs.
                 </p>
-                <div class="project-buttons">
-                  <a href="https://stopscams.in" target="_blank" class="cta"
-                    aria-label="Visit stopscams Live">
-                    <span>Live view</span>
-                    <svg viewBox="0 0 13 10" height="10px" width="15px">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="image-div">
-                <img src="src/webp/stopscams-preview.webp" alt="stopscams website preview image" />
               </div>
             </div>
           </div>
-          <!-- ---------------------- -->
-          <div data-aos="fade-up" class="project-box-wrapper">
-            <div class="project-box project-box2" id="project-box2">
-              <div class="info-div">
-                <img src="src/ico/notesync-favicon.ico" alt="notesync website favicon" class="faviconforProject" />
-                <article class="ProjectHeading">NoteSync</article>
-                <p class="ProjectDescription">
-                  Notesync: A note-taking app powered by Supabase, designed to sync and store your notes instantly with a smooth and minimal user interface.
-                </p>
-                <div class="project-buttons">
-                  <a href="https://github.com/vinodjangid07/notesync-supabase" target="_blank" class="github-redirect"
-                    aria-label="Visit Pexelicons on GitHub">
-                    <img src="src/svg/github.svg" alt="github redirect button" />
-                  </a>
-                  <a href="https://notesync-site.netlify.app/" target="_blank" class="cta"
-                    aria-label="Visit NoteSync Live">
-                    <span>Live view</span>
-                    <svg viewBox="0 0 13 10" height="10px" width="15px">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="image-div">
-                <img src="src/webp/notesync-preview.webp" alt="NoteSync website preview image" />
-              </div>
-            </div>
-          </div>
-          <!-- ---------------------- -->
-          <div data-aos="fade-up" class="project-box-wrapper">
-            <div class="project-box project-box2" id="project-box2">
-              <div class="info-div">
-                <img src="src/ico/wyd-favicon.ico" alt="withyourdog website favicon" class="faviconforProject" />
-                <article class="ProjectHeading">With Your Dog</article>
-                <p class="ProjectDescription">
-                  WithYour.Dog: Discover dog-friendly places near you with our simple Airtable-powered app, integrated with Ola Maps for seamless navigation.
-                </p>
-                <div class="project-buttons">
-                  <a href="https://withyour.dog" target="_blank" class="cta"
-                    aria-label="Visit withyourdog Live">
-                    <span>Live view</span>
-                    <svg viewBox="0 0 13 10" height="10px" width="15px">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="image-div">
-                <img src="src/webp/wyd-preview.webp" alt="withyourdog website preview image" />
-              </div>
-            </div>
-          </div>
-          <!-- ---------------------- -->
-          <div data-aos="fade-up" class="project-box-wrapper">
-            <div class="project-box project-box2" id="project-box2">
-              <div class="info-div">
-                <img src="src/webp/pexelicon-favicon.webp" alt="pexelicon website favicon" class="faviconforProject" />
-                <article class="ProjectHeading">Pexelicons</article>
-                <p class="ProjectDescription">
-                  Pexelicons: A world of personalized file folder icons to
-                  transform your PC into a reflection of your style.
-                </p>
-                <div class="project-buttons">
-                  <a href="https://github.com/vinodjangid07/Pexelicons" target="_blank" class="github-redirect"
-                    aria-label="Visit Pexelicons on GitHub">
-                    <img src="src/svg/github.svg" alt="github redirect button" />
-                  </a>
-                  <a href="https://vinodjangid07.github.io/Pexelicons/" target="_blank" class="cta"
-                    aria-label="Visit Pexelicons Live">
-                    <span>Live view</span>
-                    <svg viewBox="0 0 13 10" height="10px" width="15px">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="image-div">
-                <img src="src/webp/Group 76.webp" alt="Pexelicon website preview image" />
-              </div>
-            </div>
-          </div>
-          <!-- --------------------- -->
-          <div data-aos="fade-up" class="project-box-wrapper">
-            <div class="project-box project-box2" id="project-box2">
-              <div class="info-div">
-                <img src="src/webp/lunetra-favicon.webp" alt="lunetra website favicon" class="faviconforProject" />
-                <article class="ProjectHeading">Lunetra Studio</article>
-                <p class="ProjectDescription">
-                  Lunetra Studio: A fashion-forward site showcasing elegant collections with modern design, built to highlight quality, story, and craftsmanship.
-                </p>
-                <div class="project-buttons">
-                  <a href="https://lunetra-studio.netlify.app/" target="_blank" class="cta"
-                    aria-label="Visit lunetra Live">
-                    <span>Live view</span>
-                    <svg viewBox="0 0 13 10" height="10px" width="15px">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="image-div">
-                <img src="src/webp/lunetra-preview.webp" alt="Lunetra website preview image" />
-              </div>
-            </div>
-          </div>
-          <!-- --------------------- -->
 
+          <!-- BakeHouse -->
+          <div data-aos="fade-up" class="project-box-wrapper">
+            <div class="project-box project-box2" id="project-box2" style="height: auto; padding-bottom: 20px;">
+              <div class="info-div info-div-centered">
+                <article class="ProjectHeading">DEPI Cloud Graduation Project (BakeHouse)</article>
+                <p class="ProjectDescription">
+                  A robust cloud architecture implementation showcasing highly available infrastructure.
+                </p>
+                <img src="depi_bakehouse.png" alt="BakeHouse Architecture Diagram" style="width: 80%; border-radius: 10px; margin-top: 15px; border: 1px solid var(--tech-stack-box-border-color);" />
+                <div class="project-buttons" style="justify-content: center; margin-top: 15px;">
+                  <a href="https://github.com/Zyaddhossam/BakeHouse" target="_blank" class="cta" aria-label="BakeHouse GitHub">
+                     <span>View GitHub Repository</span>
+                     <svg viewBox="0 0 13 10" height="10px" width="15px"><path d="M1,5 L11,5"></path><polyline points="8 1 12 5 8 9"></polyline></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-section-container" id="freelance">
+      <div class="projects-section-div">
+        <div class="section-heading" data-aos="fade-up">
+          <h2 class="section-heading-article" tabindex="0">
+            Freelance Work
+          </h2>
+          <p class="sectionHeadingP"></p>
+        </div>
+        <div class="project-boxes-div" style="flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 30px;">
+          <div data-aos="fade-up" class="project-box-wrapper" style="width: 45%; min-width: 300px;">
+            <div class="project-box project-box2" id="project-box2" style="height: auto; min-height: 250px; padding: 30px 0;">
+              <div class="info-div info-div-centered">
+                <article class="ProjectHeading" style="font-size: 2.2rem;">AWS Cloud Deployment</article>
+                <p class="ProjectDescription">
+                  Collaborated with Gulf region clients to architect and migrate their projects to AWS, ensuring high availability, security, and scalability using DevOps best practices.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-up" class="project-box-wrapper" style="width: 45%; min-width: 300px;">
+            <div class="project-box project-box2" id="project-box2" style="height: auto; min-height: 250px; padding: 30px 0;">
+              <div class="info-div info-div-centered">
+                <article class="ProjectHeading" style="font-size: 2.2rem;">Alfan Alandalosy</article>
+                <p class="ProjectDescription">
+                  Developed and deployed the official WordPress website for Alfan Alandalosy.
+                </p>
+                <div class="project-buttons" style="justify-content: center; margin-top: 15px;">
+                  <a href="https://alfanalandalosy.com/" target="_blank" class="cta" aria-label="Visit Website">
+                     <span>Visit Website</span>
+                     <svg viewBox="0 0 13 10" height="10px" width="15px"><path d="M1,5 L11,5"></path><polyline points="8 1 12 5 8 9"></polyline></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-section-container" id="blog" style="margin-bottom: 50px;">
+      <div class="projects-section-div">
+        <div class="section-heading" data-aos="fade-up">
+          <h2 class="section-heading-article" tabindex="0">
+            Tech Notes & Blog
+          </h2>
+          <p class="sectionHeadingP"></p>
+        </div>
+        <div class="project-boxes-div" style="flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 30px;">
+          <div data-aos="fade-up" class="project-box-wrapper" style="width: 45%; min-width: 300px;">
+            <div class="project-box project-box2" id="project-box2" style="height: auto; min-height: 200px; padding: 30px 0;">
+              <div class="info-div info-div-centered">
+                <article class="ProjectHeading" style="color: var(--color-gray); font-style: italic; font-size: 2.2rem;">"Reading docs instead of tutorials."</article>
+                <p class="ProjectDescription">
+                  Articles and deep dives into DevOps, Cloud Architecture, and Backend engineering coming soon.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -569,25 +543,19 @@ What are you doing here?! you sneaky developer...
             <article>GetinTouch();</article>
           </div>
           <div class="logos">
-            <a href="https://www.instagram.com/pexel_ui/" target="_blank" tabindex="0"
-              aria-label="My instagram"><svg viewBox="0 0 448 512" class="SocialHandle">
-                <path
-                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
-              </svg></a>
-
-            <a href="https://www.linkedin.com/in/vinod-jangid-b401111a1?original_referer=" target="_blank"
+            <a href="https://www.linkedin.com/in/momenmotaz/" target="_blank"
               aria-label="My Linkdin"><svg class="SocialHandle" viewBox="0 0 448 512">
                 <path
                   d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
               </svg></a>
 
-            <a href="https://github.com/vinodjangid07" target="_blank" aria-label="My github"><svg viewBox="0 0 496 512"
+            <a href="https://github.com/momenmotaz" target="_blank" aria-label="My github"><svg viewBox="0 0 496 512"
                 class="SocialHandle">
                 <path
                   d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
               </svg></a>
 
-            <a href="mailto:infovinodjangid@gmail.com" target="_blank" aria-label="My G mail"><svg id="GmailLogo"
+            <a href="mailto:momenmotaz88@gmail.com" target="_blank" aria-label="My G mail"><svg id="GmailLogo"
                 viewBox="0 0 512 512">
                 <path
                   d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
@@ -607,8 +575,8 @@ What are you doing here?! you sneaky developer...
         </div>
         <div class="footer-bottom">
           <article>
-            Design & Built by Vinod Jangid
-            &#169; twentytwentythree
+            Design & Built by Momen Motaz
+            &#169; twentytwentyfour
           </article>
         </div>
       </div>
@@ -616,6 +584,7 @@ What are you doing here?! you sneaky developer...
   </footer>
   <!-- footer ends here -->
 
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="main.js"></script>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -625,7 +594,7 @@ What are you doing here?! you sneaky developer...
 
   <script>
     function openURL() {
-      var url = "src/pdf/Vinod's Resume.pdf";
+      var url = "momen_resume.pdf";
 
       window.open(url, "_blank");
     }
@@ -666,6 +635,25 @@ What are you doing here?! you sneaky developer...
       });
     });
   </script>
+
+  <!-- Chatbot Widget -->
+  <div id="chatbot-container" class="chatbot-container closed">
+    <div class="chatbot-header" onclick="toggleChatbot()">
+      <span class="chatbot-title">🐉 Dragon AI Assistant</span>
+      <span class="chatbot-toggle-icon">✖</span>
+    </div>
+    <div class="chatbot-body" id="chatbot-body">
+      <div class="chat-message bot">Hello! I'm your AI assistant. How can I help you today?</div>
+    </div>
+    <div class="chatbot-footer">
+      <input type="text" id="chat-input" placeholder="Type a message..." onkeypress="handleChatKeyPress(event)" />
+      <button onclick="sendChatMessage()">Send</button>
+    </div>
+  </div>
+  <div id="chatbot-fab" class="chatbot-fab" onclick="toggleChatbot()">
+    ✨
+  </div>
+
 </body>
 
 </html>

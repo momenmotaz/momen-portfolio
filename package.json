@@ -1,0 +1,24 @@
+{
+  "name": "momen-portfolio",
+  "version": "1.0.0",
+  "description": "<p align=\"justify\">This website displays my Projects, Web presence, Story, Work experience, and contact information.</p>",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinodjangid07/vinodjangid07.github.io.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/vinodjangid07/vinodjangid07.github.io/issues"
+  },
+  "homepage": "https://github.com/vinodjangid07/vinodjangid07.github.io#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  }
+}
