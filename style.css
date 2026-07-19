@@ -2390,7 +2390,9 @@ body.has-announcement {
 .gradient-text {
     background: linear-gradient(90deg, var(--color-light-blue), var(--color-light-purple));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
+    color: transparent;
     display: inline-block;
 }
 
