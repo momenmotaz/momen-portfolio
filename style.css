@@ -2417,6 +2417,25 @@ body.has-announcement {
     margin-bottom: 40px;
     padding-left: 60px;
 }
+@media (max-width: 600px) {
+    .timeline-item {
+        padding-left: 40px;
+    }
+    .timeline-container::before {
+        left: 10px;
+    }
+    .timeline-dot {
+        left: 1px;
+        width: 16px;
+        height: 16px;
+    }
+    .stat-number {
+        font-size: 2.5rem !important;
+    }
+    .contact-title {
+        font-size: 2.8rem !important;
+    }
+}
 .timeline-dot {
     position: absolute;
     left: 11px;
@@ -2477,7 +2496,7 @@ body.has-announcement {
    -------------------------------------------------------------------------- */
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
     gap: 30px;
     max-width: 1000px;
     margin: 0 auto;
@@ -2542,7 +2561,7 @@ body.has-announcement {
    -------------------------------------------------------------------------- */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
@@ -2616,6 +2635,11 @@ body.has-announcement {
 }
 .contact-info {
     padding-right: 20px;
+}
+@media (max-width: 900px) {
+    .contact-info {
+        padding-right: 0;
+    }
 }
 .contact-title {
     font-size: 4rem;
