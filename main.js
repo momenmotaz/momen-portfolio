@@ -117,3 +117,47 @@ async function sendChatMessage() {
     msgDiv.innerHTML = 'Error: ' + error.message;
   }
 }
+
+// --------------------------------------------------------------------------
+// Advanced UI Interactions
+// --------------------------------------------------------------------------
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Scroll Progress Bar
+    const scrollProgress = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (scrollTop / scrollHeight) * 100;
+        if(scrollProgress) scrollProgress.style.width = scrolled + '%';
+    });
+
+    // 2. Custom Cursor
+    const cursor = document.querySelector('.custom-cursor');
+    const cursorDot = document.querySelector('.custom-cursor-dot');
+    
+    // Check if device supports hover (desktop)
+    if(window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+        document.addEventListener('mousemove', (e) => {
+            if(cursor) {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            }
+            if(cursorDot) {
+                cursorDot.style.left = e.clientX + 'px';
+                cursorDot.style.top = e.clientY + 'px';
+            }
+        });
+
+        // Add hover effect to links and buttons
+        const interactables = document.querySelectorAll('a, button, input, textarea, .stat-card, .service-card');
+        interactables.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                if(cursor) cursor.classList.add('hover');
+            });
+            el.addEventListener('mouseleave', () => {
+                if(cursor) cursor.classList.remove('hover');
+            });
+        });
+    }
+});
