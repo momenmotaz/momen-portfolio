@@ -1,0 +1,227 @@
+:root {
+    --bg-color: #0d0d0d;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --text-primary: #ffffff;
+    --text-secondary: #999999;
+    --accent-1: #cf59e6;
+    --accent-2: #6bc5f8;
+    --glow-spread: rgba(207, 89, 230, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Fira Code', monospace;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+    padding: 40px 20px;
+}
+
+/* Background Effects */
+.background-effects {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.blob {
+    position: absolute;
+    filter: blur(80px);
+    opacity: 0.4;
+    border-radius: 50%;
+    animation: float 10s ease-in-out infinite;
+}
+
+.blob1 {
+    top: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background: var(--accent-1);
+    animation-delay: 0s;
+}
+
+.blob2 {
+    bottom: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: var(--accent-2);
+    animation-delay: -5s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(30px, 30px) scale(1.1); }
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header */
+.profile-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-image-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    background: linear-gradient(var(--bg-color), var(--bg-color)) padding-box,
+                linear-gradient(45deg, var(--accent-1), var(--accent-2)) border-box;
+    position: relative;
+    z-index: 2;
+}
+
+.profile-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--accent-1), var(--accent-2));
+    filter: blur(20px);
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.profile-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    background: linear-gradient(90deg, var(--accent-2), var(--accent-1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.profile-bio {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+/* Links */
+.links-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+.link-btn i:not(.hover-icon),
+.link-btn svg.credly-icon {
+    position: absolute;
+    left: 20px;
+    font-size: 1.3rem;
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+.link-btn span {
+    z-index: 2;
+}
+
+.link-btn .hover-icon {
+    position: absolute;
+    right: 20px;
+    font-size: 1.1rem;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.link-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+
+.link-btn:hover {
+    border-color: var(--glow-spread);
+    box-shadow: 0 0 20px rgba(207, 89, 230, 0.2);
+    transform: translateY(-3px);
+}
+
+.link-btn:hover::before {
+    transform: translateX(100%);
+}
+
+.link-btn:hover .hover-icon {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (max-width: 480px) {
+    .profile-name {
+        font-size: 1.8rem;
+    }
+    .link-btn {
+        padding: 16px;
+        font-size: 1rem;
+    }
+}
