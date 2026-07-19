@@ -161,3 +161,57 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// --------------------------------------------------------------------------
+// Contact Form Submission Handling
+// --------------------------------------------------------------------------
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const submitBtn = contactForm.querySelector('.submit-btn');
+    const originalBtnText = submitBtn.innerHTML;
+    
+    // Change button state
+    submitBtn.innerHTML = '<span>Sending...</span>';
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = '0.7';
+    formStatus.style.display = 'none';
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: contactForm.method,
+        body: new FormData(contactForm),
+        headers: {
+            'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        contactForm.reset();
+        formStatus.textContent = 'Thanks! Your message has been sent.';
+        formStatus.style.color = '#10B981'; // Success color (emerald)
+        formStatus.style.display = 'block';
+      } else {
+        const data = await response.json();
+        if (Object.hasOwn(data, 'errors')) {
+          formStatus.textContent = data.errors.map(error => error.message).join(', ');
+        } else {
+          formStatus.textContent = 'Oops! There was a problem submitting your form.';
+        }
+        formStatus.style.color = '#EF4444'; // Error color (red)
+        formStatus.style.display = 'block';
+      }
+    } catch (error) {
+      formStatus.textContent = 'Oops! There was a problem submitting your form.';
+      formStatus.style.color = '#EF4444';
+      formStatus.style.display = 'block';
+    } finally {
+      submitBtn.innerHTML = originalBtnText;
+      submitBtn.disabled = false;
+      submitBtn.style.opacity = '1';
+    }
+  });
+}
